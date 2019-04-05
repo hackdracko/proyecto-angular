@@ -1,0 +1,37 @@
+<div class="container">
+    <h3>Usuarios</h3>
+    <mat-card>
+      <div class="row card-title-new">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <span>
+            Agregar Nuevo Usuario
+          </span>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+          <button mat-raised-button color="default" (click)="return()"><i class="material-icons md-24">keyboard_arrow_left</i>Regresar</button>
+          <button mat-raised-button color="default" (click)="clear()"><i class="material-icons md-24">settings</i>Limpiar</button>
+          <button mat-raised-button color="primary" [disabled]="!form.valid"><i class="material-icons md-24">save</i>Guardar</button>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+        <form [formGroup]="form" class="card-form">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <mat-form-field class="full-width">
+                <input formControlName="name" matInput placeholder="Nombre">
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <mat-form-field class="full-width">
+                <input formControlName="user" matInput placeholder="Usuario">
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <mat-form-field class="full-width">
+                <input formControlName="email" matInput placeholder="Email">
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+    </mat-card>
+  </div>

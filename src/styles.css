@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.card-title-new {
+  padding: 10px;
+}
+
+.card-form {
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.action {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-1 col-lg-1 text-left">
+              <button mat-icon-button (click)="onSidenavToggle()">
+                  <mat-icon>menu</mat-icon>
+              </button>
+              <img alt="logo" height="40" width="150" src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png">
+          </div>
+          <!-- <div class="col-sm-12 col-md-2 col-lg-2 text-center">
+              Aqui Va el Logo
+          </div>-->
+          <div class="col-sm-12 col-md-11 col-lg-11 text-right">
+              <button class="button-menu" mat-button [matMenuTriggerFor]="menuCuenta">Mi Cuenta <i class="material-icons">arrow_drop_down</i></button>
+              <mat-menu #menuCuenta="matMenu" overlapTrigger="false">
+                <button mat-menu-item routerLink="/retiro">Configuración</button>
+                <button mat-menu-item (click)="logout()" >Salir</button>
+              </mat-menu>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

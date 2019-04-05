@@ -1,0 +1,52 @@
+<div class="container">
+  <h3>Usuarios</h3>
+  <mat-card>
+    <div class="card-title">
+      <span>
+        Lista de Usuarios
+      </span>
+      <button mat-raised-button color="primary" (click)="add()">Agregar Usuario</button>
+    </div>
+    <mat-divider></mat-divider>
+        <mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.id }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="value1">
+              <mat-header-cell *matHeaderCellDef>Value1</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.value1 }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="value2">
+              <mat-header-cell *matHeaderCellDef>Value2</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.value2 }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="value3">
+              <mat-header-cell *matHeaderCellDef>Value3</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.value3 }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="value4">
+              <mat-header-cell *matHeaderCellDef>Value4</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.value4 }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="value5">
+              <mat-header-cell *matHeaderCellDef>Value5</mat-header-cell>
+              <mat-cell *matCellDef="let data">{{ data.value5 }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+              <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
+              <mat-cell *matCellDef="let data">
+                  <i class="material-icons md-24 action" (click)="edit(data)">edit</i>
+                  <i class="material-icons md-24 action" (click)="delete(data.id)">delete_forever</i>
+              </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumn"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumn"></mat-row>
+        </mat-table>
+      <!-- <pagination [length]="length" (currentPage)="changePage($event)"></pagination> -->
+      <!-- <mat-paginator [pageSizeOptions]="[2, 10, 20]" showFirstLastButtons></mat-paginator> -->
+      <mat-paginator [length]="resultsLength" [pageSize]="perPage" #paginator>
+      </mat-paginator>
+  </mat-card>
+</div>

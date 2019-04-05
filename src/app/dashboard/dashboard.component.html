@@ -1,0 +1,22 @@
+<div class="menu-container">
+<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+<mat-sidenav-container class="menu-sidenav-container">
+    <mat-sidenav #sidenav role="navigation" class="menu-sidenav">
+        <mat-nav-list>
+          <mat-list-item class="menu-list-item-logo">
+            <span>
+              <img alt="logo" height="40" width="150" src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png">
+            </span>
+          </mat-list-item>
+          <a class="menu-list-item" mat-list-item routerLink="/main" (click)="sidenav.close()"><i class="material-icons md-24">home</i><span>Inicio</span></a>
+          <a class="menu-list-item" mat-list-item routerLink="/user" (click)="sidenav.close()"><i class="material-icons md-24">account_circle</i><span>Usuarios</span></a>
+          <a class="menu-list-item" mat-list-item routerLink="/main" (click)="sidenav.close()"><i class="material-icons md-24">account_circle</i><span>Roles</span></a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="menu-sidenav-content">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

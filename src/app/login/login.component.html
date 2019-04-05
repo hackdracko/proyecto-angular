@@ -1,0 +1,38 @@
+<div class="bg">
+  <!-- logo -->
+  <div class="text-center">
+    <img class="logo" src="./assets/img/logo.png" />
+  </div>
+
+
+    <div>
+      <form [formGroup]="form" (ngSubmit)="login()" >
+        <!-- user -->
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              autocomplete="off"
+              placeholder="Nombre de usuario"
+              formControlName="user"
+            />
+          </mat-form-field>
+        </div>
+        <!-- pass -->
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              type="password"
+              placeholder="Contraseña"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-button type="submit" [disabled]="!form.valid">ACEPTAR</button>
+        </div>
+      </form>
+
+  </div>
