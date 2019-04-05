@@ -1,38 +1,26 @@
-<div class="bg">
-  <!-- logo -->
-  <div class="text-center">
-    <img class="logo" src="./assets/img/logo.png" />
-  </div>
-
-
-    <div>
-      <form [formGroup]="form" (ngSubmit)="login()" >
-        <!-- user -->
-        <div>
+<div class="login">
+  <mat-card>
+    <mat-card-header class="login-header">
+      <div class="text-center">
+        <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" />
+      </div>
+    </mat-card-header>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
           <mat-form-field>
-            <input
-              matInput
-              type="text"
-              autocomplete="off"
-              placeholder="Nombre de usuario"
-              formControlName="user"
-            />
+            <input matInput type="text" autocomplete="off" placeholder="Nombre de usuario" formControlName="user" />
           </mat-form-field>
         </div>
-        <!-- pass -->
-        <div>
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
           <mat-form-field>
-            <input
-              matInput
-              type="password"
-              placeholder="Contraseña"
-              formControlName="password"
-            />
+            <input matInput type="password" placeholder="Contraseña" formControlName="password" />
           </mat-form-field>
         </div>
-        <div>
-          <button mat-button type="submit" [disabled]="!form.valid">ACEPTAR</button>
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+          <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">ACEPTAR</button>
         </div>
-      </form>
-
-  </div>
+      </div>
+    </form>
+  </mat-card>
+</div>

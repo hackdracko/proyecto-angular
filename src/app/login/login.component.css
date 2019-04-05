@@ -1,0 +1,12 @@
+.login{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-header{
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #1D1D29;
+}
